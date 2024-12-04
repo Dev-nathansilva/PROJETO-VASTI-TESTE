@@ -12,7 +12,7 @@
   "redirects": [
     {
       "source": "/:slug",
-      "destination": "/",
+      "destination": "/index.html",
       "permanent": true
     }
   ]
