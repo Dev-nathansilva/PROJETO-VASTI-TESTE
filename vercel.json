@@ -7,6 +7,10 @@
     {
       "source": "/contato",
       "destination": "/contato.html"
+    },
+    {
+      "source": "/:slug",
+      "destination": "/teste.html"
     }
   ]
 }
