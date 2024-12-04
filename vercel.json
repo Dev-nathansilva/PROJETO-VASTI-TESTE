@@ -10,7 +10,8 @@
     },
     {
       "source": "/:slug",
-      "destination": "/index.html"
+      "destination": "/index.html",
+      "statusCode": 301
     }
   ]
 }
