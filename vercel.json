@@ -12,7 +12,7 @@
   "redirects": [
     {
       "source": "/(?!home|contato).*",
-      "destination": "/teste",
+      "destination": "/teste.html",
       "statusCode": 301
     }
   ]
