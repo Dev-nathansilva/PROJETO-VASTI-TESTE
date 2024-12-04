@@ -8,12 +8,5 @@
       "source": "/contato",
       "destination": "/contato.html"
     }
-  ],
-  "version": 2,
-  "builds": [
-    {
-      "src": "middleware.js",
-      "use": "@vercel/node"
-    }
   ]
 }
