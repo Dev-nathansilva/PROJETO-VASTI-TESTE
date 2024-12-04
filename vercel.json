@@ -7,22 +7,6 @@
     {
       "source": "/contato",
       "destination": "/contato.html"
-    },
-    {
-      "source": "/colecao",
-      "destination": "/colecao.html"
-    }
-  ],
-  "redirects": [
-    {
-      "source": "/(home|contato|colecao)",
-      "destination": "/:match",
-      "permanent": false
-    },
-    {
-      "source": "/:slug",
-      "destination": "/home",
-      "permanent": true
     }
   ]
 }
