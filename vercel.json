@@ -8,5 +8,12 @@
       "source": "/contato",
       "destination": "/contato.html"
     }
+  ],
+  "redirects": [
+    {
+      "source": "/(?!home|contato).*",
+      "destination": "/teste",
+      "statusCode": 301
+    }
   ]
 }
