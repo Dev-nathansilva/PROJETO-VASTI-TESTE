@@ -15,15 +15,8 @@
   ],
   "redirects": [
     {
-      "source": "/:slug",
-      "has": [
-        {
-          "type": "query",
-          "key": "slug",
-          "value": "(?!home|contato|colecao)"
-        }
-      ],
-      "destination": "/",
+      "source": "/:slug*",
+      "destination": "/home",
       "permanent": true
     }
   ]
