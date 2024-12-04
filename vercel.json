@@ -9,11 +9,11 @@
       "destination": "/contato.html"
     }
   ],
-  "redirects": [
+  "version": 2,
+  "builds": [
     {
-      "source": "/(?!home|contato).*",
-      "destination": "/teste.html",
-      "statusCode": 301
+      "src": "middleware.js",
+      "use": "@vercel/node"
     }
   ]
 }
