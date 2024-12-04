@@ -1,14 +1,12 @@
 {
-  "redirects": [
+  "rewrites": [
     {
       "source": "/home",
-      "destination": "/index.html",
-      "permanent": true
+      "destination": "/index.html"
     },
     {
       "source": "/contato",
-      "destination": "/contato.html",
-      "permanent": true
+      "destination": "/contato.html"
     }
   ]
 }
