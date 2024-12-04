@@ -8,12 +8,5 @@
       "source": "/contato",
       "destination": "/contato.html"
     }
-  ],
-  "redirects": [
-    {
-      "source": "/:slug",
-      "destination": "/",
-      "permanent": true
-    }
   ]
 }
