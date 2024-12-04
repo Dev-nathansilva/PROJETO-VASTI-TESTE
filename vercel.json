@@ -15,23 +15,8 @@
   ],
   "redirects": [
     {
-      "source": "/home",
-      "destination": "/index.html",
-      "permanent": false
-    },
-    {
-      "source": "/contato",
-      "destination": "/contato.html",
-      "permanent": false
-    },
-    {
-      "source": "/colecao",
-      "destination": "/colecao.html",
-      "permanent": false
-    },
-    {
-      "source": "/:slug",
-      "destination": "/",
+      "source": "/",
+      "destination": "/home",
       "permanent": true
     }
   ]
