@@ -73,12 +73,12 @@ body #preloader {
 }
 
 main#content {
+  background-color: #e2ded9;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
   gap: 10px;
-  margin: 25px 0;
+  padding: 25px 0;
   overflow: auto;
 }
 
@@ -198,7 +198,7 @@ main#content {
 /* RESPONSIVIDADE */
 
 @media (min-height: 700px) and (min-width: 768px) {
-  body {
+  #content {
     display: flex;
     justify-content: center;
     min-height: 100vh;
@@ -206,8 +206,8 @@ main#content {
 }
 
 @media (max-width: 768px) {
-  body {
+  #content {
     height: 100%;
-    max-height: 100vh;
+    min-height: 100vh;
   }
 }
