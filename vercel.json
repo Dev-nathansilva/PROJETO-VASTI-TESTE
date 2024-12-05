@@ -7,11 +7,13 @@
     {
       "source": "/contato",
       "destination": "/contato.html"
-    },
+    }
+  ],
+  "redirects": [
     {
       "source": "/:slug",
       "destination": "/",
-      "statusCode": 301
+      "permanent": true
     }
   ]
 }
