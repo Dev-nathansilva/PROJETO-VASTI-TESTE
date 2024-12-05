@@ -1,26 +1,15 @@
 {
-  "rewrites": [
+  "version": 2,
+  "builds": [
     {
-      "source": "/home",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/contato",
-      "destination": "/contato.html"
+      "src": "server.js",
+      "use": "@vercel/node"
     }
   ],
-  "redirects": [
+  "routes": [
     {
-      "source": "/:slug",
-      "destination": "/",
-      "has": [
-        {
-          "type": "filesystem",
-          "key": "file",
-          "value": "/:slug.html"
-        }
-      ],
-      "permanent": false
+      "src": "/(.*)",
+      "dest": "server.js"
     }
   ]
 }
