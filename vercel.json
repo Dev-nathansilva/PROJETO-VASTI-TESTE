@@ -1,9 +1,17 @@
 {
-  "version": 2,
-  "builds": [
+  "rewrites": [
     {
-      "src": "middleware.js",
-      "use": "@vercel/node"
+      "source": "/home",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/contato",
+      "destination": "/contato.html"
+    },
+    {
+      "source": "/:slug",
+      "destination": "/",
+      "statusCode": 301
     }
   ]
 }
