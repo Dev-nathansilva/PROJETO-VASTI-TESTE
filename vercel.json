@@ -10,15 +10,20 @@
     },
     {
       "source": "/:slug",
-      "destination": "/:slug",
-      "statusCode": 200
+      "destination": "/:slug.html"
     }
   ],
   "redirects": [
     {
       "source": "/:slug",
       "destination": "/",
-      "permanent": true
+      "has": [
+        {
+          "type": "file",
+          "value": "/:slug.html"
+        }
+      ],
+      "permanent": false
     }
   ]
 }
