@@ -8,13 +8,13 @@ app.use(express.static(path.join(__dirname, "public")));
 
 // Rota principal ("/")
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "home.html"));
+  res.sendFile(path.join(__dirname, "public", "pages", "home.html"));
 });
 
 // Rota amigável dinâmica ("/:slug")
 app.get("/:slug", (req, res) => {
   const slug = req.params.slug;
-  const filePath = path.join(__dirname, "public", `${slug}.html`);
+  const filePath = path.join(__dirname, "public", "pages", `${slug}.html`);
 
   res.sendFile(filePath, (err) => {
     if (err) {
