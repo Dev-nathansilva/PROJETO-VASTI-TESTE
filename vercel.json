@@ -7,10 +7,6 @@
     {
       "source": "/contato",
       "destination": "/contato.html"
-    },
-    {
-      "source": "/:slug",
-      "destination": "/:slug.html"
     }
   ],
   "redirects": [
