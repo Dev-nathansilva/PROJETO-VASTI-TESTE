@@ -1,0 +1,213 @@
+/* FONTES */
+@import url("https://fonts.googleapis.com/css2?family=Zen+Antique&display=swap");
+
+/* ------------------------------------------------------ */
+
+/* CONFIGURAÇÕES INICIAIS */
+
+body {
+  font-family: "Zen Antique", serif;
+}
+
+/* ------------------------------------------------------ */
+
+/* PRELOADER */
+
+body #preloader {
+  min-height: 100vh;
+  background-color: #e2ded9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.spinner-box {
+  position: relative;
+}
+.spinner-box .logo-image {
+  position: absolute;
+  top: 19px;
+  left: 42px;
+  width: 69px;
+}
+
+.circle-border {
+  width: 150px;
+  height: 150px;
+  padding: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: linear-gradient(
+    0deg,
+    rgba(168, 90, 8, 0.1) 33%,
+    rgba(168, 90, 8, 1) 100%
+  );
+  animation: spin 0.8s linear 0s infinite;
+}
+
+.circle-core {
+  width: 100%;
+  height: 100%;
+  background-color: #e2ded9;
+  border-radius: 50%;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+/* ------------------------------------------------------ */
+
+/* CONTEUDO */
+
+#content {
+  display: none;
+}
+
+main#content {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  gap: 10px;
+  margin: 25px 0;
+  overflow: auto;
+}
+
+.logo-home {
+  width: 140px;
+  margin-bottom: 20px;
+}
+
+/* --------------------------------------------------------- */
+
+/* BOTOES DOS LINKS */
+
+.links-button {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+.links-button .button {
+  background-color: #f4f4f4;
+  width: 330px;
+  height: 70px;
+  display: flex;
+  padding: 0 20px;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  border-radius: 10px;
+  border: 1px solid #f7f7f7;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+.links-button .button:hover {
+  background-color: #ebebeb;
+  border-color: #f7f7f7;
+}
+
+.links-button .button.destaque {
+  background-color: #a85a08;
+  color: #f4f4f4;
+}
+.links-button .button.destaque:hover {
+  background-color: #c46c15;
+}
+
+.links-button .button .icone-button {
+  width: 40px;
+}
+
+/* --------------------------------------------------------- */
+
+/* CARROSSEL */
+
+.swiper {
+  width: 330px;
+  height: 130px;
+  margin-bottom: 16px;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.swiper-slide img {
+  max-height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.swiper-wrapper {
+  transition-timing-function: linear !important;
+}
+
+/* --------------------------------------------------------- */
+
+/* REDE SOCIAIS */
+
+.links-redes-sociais {
+  display: flex;
+  gap: 10px;
+  overflow: visible;
+}
+
+.link-rede-social {
+  background-color: #fff;
+  padding: 16px;
+  border-radius: 9px;
+  border: 1px solid #a85a08;
+}
+
+.link-rede-social img {
+  width: 42px;
+  pointer-events: none;
+}
+
+.link-rede-social:hover {
+  background-color: #a85a08;
+}
+
+.link-rede-social:hover svg path {
+  fill: #fff;
+}
+
+/* --------------------------------------- */
+
+/* FOOTER */
+
+.footer {
+  color: #979797;
+}
+
+/* -------------------------------------------------------- */
+
+/* RESPONSIVIDADE */
+
+@media (min-height: 700px) and (min-width: 768px) {
+  body {
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    height: 100%;
+    max-height: 100vh;
+  }
+}
