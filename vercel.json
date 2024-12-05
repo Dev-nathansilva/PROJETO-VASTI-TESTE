@@ -19,7 +19,8 @@
       "destination": "/",
       "has": [
         {
-          "type": "file",
+          "type": "filesystem",
+          "key": "file",
           "value": "/:slug.html"
         }
       ],
