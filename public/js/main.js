@@ -11,41 +11,61 @@ window.addEventListener("load", () => {
   }
 });
 
-// ANIMAÇÕES
+// CLIQUE NO CELULAR / VANTAGENS
 
-// Função para iniciar o observer
-function observeElementVisibility(selector, className, threshold = 0.8) {
-  // Cria uma instância do IntersectionObserver
-  const observer = new IntersectionObserver(
-    (entries, observer) => {
-      entries.forEach((entry) => {
-        // Quando o elemento está visível na tela
-        if (entry.isIntersecting) {
-          entry.target.classList.add(className); // Adiciona a classe especificada
-          observer.unobserve(entry.target); // Para de observar o elemento após ele ser visível
-        }
-      });
-    },
-    {
-      threshold: threshold, // A animação será acionada quando a visibilidade atingir o valor do threshold (padrão: 0.8)
-    }
-  );
+document.addEventListener("DOMContentLoaded", function () {
+  const containers = document.querySelectorAll(".vantagem");
 
-  // Selecione todos os elementos que correspondem ao seletor
-  const elementsToObserve = document.querySelectorAll(selector);
+  containers.forEach((container) => {
+    container.addEventListener("click", () => {
+      containers.forEach((el) => el.classList.remove("active"));
+      container.classList.add("active");
+    });
 
-  // Comece a observar os elementos
-  elementsToObserve.forEach((element) => {
-    observer.observe(element);
+    document.addEventListener("click", (event) => {
+      if (!container.contains(event.target)) {
+        container.classList.remove("active");
+      }
+    });
   });
-}
+});
 
-// Chamada da função para observar elementos
-observeElementVisibility(
-  ".experiencia-vasti-container",
-  "fade-in-bottom-2",
-  0.8
-);
-observeElementVisibility(".vantagens-vasti", "fade-in-bottom-2", 0.3);
-observeElementVisibility(".container-categorias", "fade-in-bottom-2", 0.8);
-observeElementVisibility(".fade-in-right", "visible-right", 0.8);
+// // ANIMAÇÕES
+
+// // Função para iniciar o observer
+// function observeElementVisibility(selector, className, threshold = 0.8) {
+//   // Cria uma instância do IntersectionObserver
+//   const observer = new IntersectionObserver(
+//     (entries, observer) => {
+//       entries.forEach((entry) => {
+//         // Quando o elemento está visível na tela
+//         if (entry.isIntersecting) {
+//           entry.target.classList.add(className); // Adiciona a classe especificada
+//           observer.unobserve(entry.target); // Para de observar o elemento após ele ser visível
+//         }
+//       });
+//     },
+//     {
+//       threshold: threshold, // A animação será acionada quando a visibilidade atingir o valor do threshold (padrão: 0.8)
+//     }
+//   );
+
+//   // Selecione todos os elementos que correspondem ao seletor
+//   const elementsToObserve = document.querySelectorAll(selector);
+
+//   // Comece a observar os elementos
+//   elementsToObserve.forEach((element) => {
+//     observer.observe(element);
+//   });
+// }
+
+// // Chamada da função para observar elementos
+// observeElementVisibility(
+//   ".experiencia-vasti-container",
+//   "fade-in-bottom-2",
+//   0.1
+// );
+// observeElementVisibility(".vantagens-vasti", "fade-in-bottom-2", 0.1);
+// observeElementVisibility(".container-categorias", "fade-in-bottom-2", 0.1);
+// observeElementVisibility(".banner-image", "fade-in-bottom", 0.1);
+// observeElementVisibility(".title-categorias", "fade-in-bottom-2", 0.1);

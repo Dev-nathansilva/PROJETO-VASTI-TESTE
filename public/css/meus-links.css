@@ -73,7 +73,7 @@ main#content {
   justify-content: center;
   align-items: center;
   /* gap: 10px; */
-  /* padding: 25px 0; */
+  padding: 25px 0;
   overflow: auto;
 }
 
@@ -206,6 +206,9 @@ main#content {
     height: 100%;
     min-height: 100vh;
     justify-content: flex-start;
-    margin-top: -18px;
+  }
+
+  .logo-home {
+    margin-top: -40px;
   }
 }
