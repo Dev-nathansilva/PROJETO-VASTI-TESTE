@@ -3,6 +3,10 @@ body {
   background-size: cover;
   padding-top: 20px;
   font-family: "Zen Antique", serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 /* ------------------------------------------ */
@@ -135,6 +139,10 @@ body {
   #menu ul.redes-sociais {
     display: none;
   }
+
+  .title-section {
+    font-size: 25px;
+  }
 }
 /* ----------------------------------------------- */
 
@@ -200,6 +208,10 @@ body {
   border-radius: 10px;
 }
 
+.categoria:focus {
+  background-color: rgba(232, 232, 232, 0.21);
+}
+
 /* Outline In */
 .categoria {
   vertical-align: middle;
@@ -238,6 +250,7 @@ body {
   width: 90px;
   height: 90px;
   margin-bottom: -3px;
+  pointer-events: none;
 }
 
 .experiencia-vasti-container {

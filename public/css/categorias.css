@@ -1,0 +1,120 @@
+#conteudo-principal .banner-categoria {
+  background: url(../images/banners-categorias/colares-desktop.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 852px;
+  height: 225px;
+  border-radius: 10px;
+}
+
+.banner-categoria {
+  margin-bottom: 40px;
+}
+
+@media (min-width: 881px) and (max-width: 1024px) {
+  /* 780px */
+  #conteudo-principal .banner-categoria {
+    width: 605px;
+    height: 160px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 880px) {
+  /* 728px */
+  #conteudo-principal .banner-categoria {
+    width: 605px;
+    height: 160px;
+  }
+}
+
+@media (max-width: 767px) {
+  /* 360px */
+  #conteudo-principal .banner-categoria {
+    background: url(../images/banners-categorias/colares-celular.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 390px;
+    height: 208px;
+  }
+}
+
+/* ---------------------------------------------------- */
+
+.grid-produtos {
+  display: grid;
+  grid-template-columns: repeat(4, 184px);
+  gap: 20px;
+}
+
+.produto {
+  width: 184px;
+  height: 287px;
+  background-color: rgba(255, 255, 255, 0.4);
+  border: 1px solid #c3c3c3;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.produto-detalhes {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.produto .image-produto {
+  background: url(../images/produtos/produto-1.jpg) no-repeat;
+  width: 184px;
+  height: 174px;
+}
+.produto-detalhes .descricao-produto {
+  color: #3f3f3f;
+  font-size: 14px;
+}
+.produto-detalhes .valor-produto {
+  color: #3f3f3f;
+  font-size: 14px;
+}
+
+/* RESPONSIVIDADE */
+
+@media (min-width: 1201px) and (max-width: 1366px) {
+  /* 1100 */
+}
+@media (min-width: 1025px) and (max-width: 1201px) {
+  /* 924 */
+}
+
+@media (min-width: 881px) and (max-width: 1024px) {
+  /* 780px */
+  .grid-produtos {
+    grid-template-columns: repeat(2, 184px);
+  }
+}
+@media (min-width: 768px) and (max-width: 880px) {
+  /* 728px */
+  .grid-produtos {
+    grid-template-columns: repeat(2, 184px);
+  }
+}
+@media (max-width: 767px) {
+  /* 360px */
+  #conteudo-principal .banner-categoria {
+    border-radius: 0px;
+  }
+
+  .grid-produtos {
+    grid-template-columns: repeat(2, 170px);
+    gap: 10px;
+  }
+
+  .produto {
+    width: 170px;
+  }
+
+  .produto .image-produto {
+    width: 170px;
+  }
+}

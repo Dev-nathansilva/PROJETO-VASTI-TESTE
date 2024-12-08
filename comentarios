@@ -1,0 +1,138 @@
+<!-- var splide = new Splide('.splide', {
+        type: 'loop',
+        padding: { left: '5rem', right: '9.6rem' }, // Espaço lateral
+        focus: 'center', 
+        perPage: 1, // Exibe parcialmente os slides laterais
+        arrows: false, // Remove as setas
+        pagination: false, // Remove a paginação
+        breakpoints: {
+          768: {
+            perPage: 1, // Exibe apenas um slide em telas menores
+            padding: { left: '1rem', right: '10rem' },
+          },
+        },
+      });
+      
+      splide.mount(); -->
+
+padding: { left: '5rem', right: '9.6rem' },
+
+<!-- --------------------------------------------------- -->
+
+SCRIPT
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var mainCarousel = new Splide(".splide", {
+      type: "loop",
+      padding: { left: "5rem", right: "9rem" },
+      focus: "center",
+      perPage: 1, // Exibe parcialmente os slides laterais
+      arrows: false, // Remove as setas
+      pagination: false, // Remove a paginação
+      gap: 10,
+    });
+
+    mainCarousel.mount();
+
+    var thumbnailCarousel = new Splide("#thumbnail-carousel", {
+      isNavigation: true,
+      gap: 10, // Espaçamento entre os itens
+      pagination: false,
+      cover: true,
+      focus: false, // Desativa a centralização
+      arrows: false, // Remove setas de navegação
+      drag: false, // Desativa o arrastar
+    }).mount();
+
+    mainCarousel.sync(thumbnailCarousel).mount();
+  });
+</script>
+
+HTML
+
+<div
+  id="splide"
+  class="splide"
+  role="group"
+  aria-label="Splide Basic HTML Example"
+>
+  <div class="splide__track">
+    <ul class="splide__list">
+      <li class="splide__slide">
+        <img src="../../../images/foto-inicial-1.jpg" alt="" />
+      </li>
+      <li class="splide__slide">
+        <img src="../../../images/foto-inicial-1.jpg" alt="" />
+      </li>
+      <li class="splide__slide">
+        <img src="../../../images/foto-inicial-1.jpg" alt="" />
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div id="thumbnail-carousel" class="splide">
+  <div class="splide__track">
+    <ul class="splide__list">
+      <li class="splide__slide">
+        <img src="../../../images/foto-inicial-1.jpg" alt="Thumbnail 1" />
+      </li>
+      <li class="splide__slide">
+        <img src="../../../images/foto-inicial-1.jpg" alt="Thumbnail 2" />
+      </li>
+      <li class="splide__slide">
+        <img src="../../../images/foto-inicial-1.jpg" alt="Thumbnail 3" />
+      </li>
+    </ul>
+  </div>
+</div>
+
+CSS
+
+<style>
+  .splide {
+    width: 500px;
+  }
+  .splide__slide {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0.6;
+    transform: scale(0.8);
+    width: 253px !important;
+    height: auto;
+  }
+  .splide__slide.is-active {
+    opacity: 1;
+    transform: scale(1);
+  }
+  .splide__slide img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  #thumbnail-carousel {
+    margin-top: 15px;
+  }
+  #thumbnail-carousel .splide__slide {
+    width: 80px !important;
+    height: 50px;
+    opacity: 0.5;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: opacity 0.3s, border-color 0.3s;
+  }
+  #thumbnail-carousel .splide__slide.is-active {
+    opacity: 1;
+    border-color: black;
+  }
+  #thumbnail-carousel .splide__list {
+    display: flex;
+    justify-content: center;
+  }
+</style>
+
+links
+
+<!-- <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script> -->
+<!-- <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet"> -->
