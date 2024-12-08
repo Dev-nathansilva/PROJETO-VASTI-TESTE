@@ -136,3 +136,35 @@ links
 
 <!-- <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script> -->
 <!-- <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet"> -->
+
+<!-- <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script>
+     
+      document.addEventListener('DOMContentLoaded', function () {
+        var mainCarousel = new Splide('.splide', {
+          type: 'loop',
+          focus: 'center', 
+          perPage: 1, // Exibe parcialmente os slides laterais
+          arrows: false, // Remove as setas
+          pagination: false, // Remove a paginação
+          gap: "10px"
+        });
+        
+        mainCarousel.mount(); 
+      
+        var thumbnailCarousel = new Splide('#thumbnail-carousel', {
+          isNavigation: true,
+          gap: 10, // Espaçamento entre os itens
+          pagination: false,
+          cover: true,
+          focus: false, // Desativa a centralização
+          arrows: false, // Remove setas de navegação
+          drag: true, // Desativa o arrastar
+        }).mount();
+      
+        mainCarousel.sync(thumbnailCarousel).mount();
+      });
+      
+      
+      
+    </script> -->

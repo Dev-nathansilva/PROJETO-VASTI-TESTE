@@ -251,3 +251,33 @@
 }
 
 /* ---------------------------------- */
+
+.fotos {
+  margin: 2rem auto;
+  max-width: 800px;
+}
+
+.splide {
+  margin-bottom: 1rem;
+}
+
+.splide__slide img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#thumbnail-carousel .splide__slide img {
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+#thumbnail-carousel .splide__slide.is-active img {
+  border-color: #007bff;
+}
+
+.fancybox__container .fancybox__backdrop {
+  background: #000000c9;
+}

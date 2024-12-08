@@ -15,6 +15,14 @@
       href="../../../images/favicon.ico"
       type="image/x-icon"
     />
+    
+    <!-- CSS do Fancybox -->
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+  />
+  
+
     <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../../../css/main.css" />
     <link rel="stylesheet" href="../../../css/colecao.css" />
@@ -124,29 +132,61 @@
     <main id="conteudo-principal">
 
       <section class="detalhes-produto-container">
-      <div class="fotos">
-        <div id="splide" class="splide" role="group" aria-label="Splide Basic HTML Example">
-          <div class="splide__track">
-            <ul class="splide__list">
-              <li class="splide__slide"><div class="bloco-azul"></div></li>
-              <li class="splide__slide"><div class="bloco-vermelho"><img src="../../../images/foto-inicial-1.jpg" alt=""></div></li>
-              <li class="splide__slide"><div class="bloco-verde"></div></li>
-              <li class="splide__slide"><div class="bloco-azul"></div></li>
-            </ul>
+        <div class="fotos">
+          <!-- Galeria Principal -->
+          <div id="splide" class="splide" role="group" aria-label="Splide Basic HTML Example">
+            <div class="splide__track">
+              <ul class="splide__list">
+                <li class="splide__slide">
+                  <a href="../../../images/foto-inicial-1.jpg" data-fancybox="gallery" >
+                    <div class="bloco-azul">
+                      <img src="../../../images/foto-inicial-1.jpg" alt="Imagem 1">
+                    </div>
+                  </a>
+                </li>
+                <li class="splide__slide">
+                  <a href="../../../images/foto-inicial-2.jpg" data-fancybox="gallery" >
+                    <div class="bloco-vermelho">
+                      <img src="../../../images/foto-inicial-2.jpg" alt="Imagem 2">
+                    </div>
+                  </a>
+                </li>
+                <li class="splide__slide">
+                  <a href="../../../images/foto-inicial-3.jpg" data-fancybox="gallery" >
+                    <div class="bloco-verde">
+                      <img src="../../../images/foto-inicial-3.jpg" alt="Imagem 3">
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        
+          <!-- Miniaturas -->
+          <div id="thumbnail-carousel" class="splide">
+            <div class="splide__track">
+              <ul class="splide__list">
+                <li class="splide__slide">
+                  <div class="bloco-azul">
+                    <img src="../../../images/foto-inicial-1.jpg" alt="Miniatura 1">
+                  </div>
+                </li>
+                <li class="splide__slide">
+                  <div class="bloco-vermelho">
+                    <img src="../../../images/foto-inicial-2.jpg" alt="Miniatura 2">
+                  </div>
+                </li>
+                <li class="splide__slide">
+                  <div class="bloco-verde">
+                    <img src="../../../images/foto-inicial-3.jpg" alt="Miniatura 3">
+                  </div>
+                </li>
+               
+              </ul>
+            </div>
           </div>
         </div>
-
-        <div id="thumbnail-carousel" class="splide" >
-          <div class="splide__track">
-            <ul class="splide__list">
-              <li class="splide__slide"><div class="bloco-azul"></div></li>
-              <li class="splide__slide"><div class="bloco-vermelho"></div></li>
-              <li class="splide__slide"><div class="bloco-verde"></div></li>
-              <li class="splide__slide"><div class="bloco-verde"></div></li>
-            </ul>
-          </div>
-        </div>
-      </div>
+        
       <div class="informacoes">
         <h2 class="titulo-produto-info">
           Colar duplo com pingente de coração
@@ -320,36 +360,71 @@
 
 
     
+   <!-- JS do Fancybox -->
+   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+
+
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
     <script>
      
-      document.addEventListener('DOMContentLoaded', function () {
-        var mainCarousel = new Splide('.splide', {
-          type: 'loop',
-          focus: 'center', 
+      document.addEventListener("DOMContentLoaded", function () {
+        // Inicialização do carrossel principal
+        var mainCarousel = new Splide(".splide", {
+          type: "slide",
+          focus: "center",
           perPage: 1, // Exibe parcialmente os slides laterais
           arrows: false, // Remove as setas
           pagination: false, // Remove a paginação
-          gap: "10px"
+          gap: "10px",
         });
-        
-        mainCarousel.mount(); 
       
-        var thumbnailCarousel = new Splide('#thumbnail-carousel', {
+        // Inicialização do carrossel de miniaturas
+        var thumbnailCarousel = new Splide("#thumbnail-carousel", {
           isNavigation: true,
           gap: 10, // Espaçamento entre os itens
           pagination: false,
           cover: true,
           focus: false, // Desativa a centralização
           arrows: false, // Remove setas de navegação
-          drag: true, // Desativa o arrastar
-        }).mount();
+          drag: true, // Permite arrastar os itens
+        });
       
-        mainCarousel.sync(thumbnailCarousel).mount();
+        // Sincroniza o carrossel principal com as miniaturas
+        mainCarousel.sync(thumbnailCarousel);
+      
+        // Monta ambos os carrosséis
+        mainCarousel.mount();
+        thumbnailCarousel.mount();
+      
+        let lastActiveIndex = 0;
+      
+        // Configuração do Fancybox com o zoom e sincronização após o fechamento
+        Fancybox.bind('[data-fancybox="gallery"]', {
+          compact: false,
+          contentClick: "iterateZoom",
+          Images: {
+            initialSize: "fit",
+            Panzoom: {
+              maxScale: 3,
+            },
+          },
+          Carousel: {
+            Navigation: false,
+          },
+          Toolbar: {
+            display: {
+              left: ["prev", "infobar", "next"],
+              middle: [],
+              right: ["close"],
+            },
+          },
+          Thumbs: {
+            type: "classic",
+          }, 
+        });
       });
       
-      
-      
+     
     </script>
     
   </body>
