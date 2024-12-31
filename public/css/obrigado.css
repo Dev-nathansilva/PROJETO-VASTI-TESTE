@@ -1,0 +1,68 @@
+body {
+  justify-content: flex-start !important;
+}
+
+#conteudo-principal {
+  margin-top: 80px;
+  gap: 30px;
+}
+
+#menu .Btn {
+  gap: 10px;
+}
+
+.container-agradecimento {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+.container-agradecimento .correct {
+  width: 50px;
+}
+
+.title-agradecimento {
+  color: #090909;
+  text-align: center;
+  font-size: 37px;
+  font-weight: 300;
+  width: 334px;
+  text-align: center;
+}
+
+.info-contato {
+  width: 200px;
+  color: #7d7d7d;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.buttons-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+/* Botão */
+.buttons-container a {
+  width: 320px;
+  height: 72px;
+  flex-shrink: 0;
+  border-radius: 5px;
+  background: #a85a08;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 300;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-button:hover {
+  background: #a85a08;
+  color: #fff;
+}
+
+.logo-completa {
+  width: 170px;
+}

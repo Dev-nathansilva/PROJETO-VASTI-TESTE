@@ -15,7 +15,9 @@ const slugMapping = {
   "pulseiras": "categorias/pulseiras.html",
   "colares": "categorias/colares.html",
   "conjuntos": "categorias/conjuntos.html",
-  "brincos/brinco-dourado": "produtos/brincos/brinco.html", // Slug composto
+  "brincos/brinco-dourado": "produtos/brincos/brinco.html",
+  "carrinho": "carrinho.html",
+  "pedido-finalizado/obrigado": "pagina-obrigado.html",
 };
 
 // Rota principal ("/")

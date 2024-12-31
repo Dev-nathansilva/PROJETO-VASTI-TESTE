@@ -22,7 +22,7 @@
     href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
   />
   
-
+  
     <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../../../css/main.css" />
     <link rel="stylesheet" href="../../../css/colecao.css" />
@@ -167,17 +167,17 @@
             <div class="splide__track">
               <ul class="splide__list">
                 <li class="splide__slide">
-                  <div class="bloco-azul">
+                  <div class="">
                     <img src="../../../images/foto-inicial-1.jpg" alt="Miniatura 1">
                   </div>
                 </li>
                 <li class="splide__slide">
-                  <div class="bloco-vermelho">
+                  <div class="">
                     <img src="../../../images/foto-inicial-2.jpg" alt="Miniatura 2">
                   </div>
                 </li>
                 <li class="splide__slide">
-                  <div class="bloco-verde">
+                  <div class="">
                     <img src="../../../images/foto-inicial-3.jpg" alt="Miniatura 3">
                   </div>
                 </li>
@@ -219,32 +219,49 @@
 
     <h4 class="produtos-relacionados">Produtos Relacionados</h4>
 
-    <div class="grid-produtos">
-      <div class="produto">
-          <div class="image-produto"></div>
-          <div class="produto-detalhes">  
-              <p class="descricao-produto">Colar duplo com pingente de coração</p>
-              <p class="valor-produto">R$ 30,00</p></div>
+    <div class="splide grid-produtos" id="produtos-carousel">
+      <div class="splide__track">
+        <ul class="splide__list">
+          <li class="splide__slide">
+            <div class="produto">
+              <div class="image-produto"></div>
+              <div class="produto-detalhes">  
+                  <p class="descricao-produto">Colar duplo com pingente de coração</p>
+                  <p class="valor-produto">R$ 30,00</p>
+              </div>
+            </div>
+          </li>
+          <li class="splide__slide">
+            <div class="produto">
+              <div class="image-produto"></div>
+              <div class="produto-detalhes">  
+                  <p class="descricao-produto">Colar duplo com pingente de coração</p>
+                  <p class="valor-produto">R$ 100,00</p>
+              </div>
+            </div>
+          </li>
+          <li class="splide__slide">
+            <div class="produto">
+              <div class="image-produto"></div>
+              <div class="produto-detalhes">  
+                  <p class="descricao-produto">Colar duplo com pingente de coração</p>
+                  <p class="valor-produto">R$ 100,00</p>
+              </div>
+            </div>
+          </li>
+          <li class="splide__slide">
+            <div class="produto">
+              <div class="image-produto"></div>
+              <div class="produto-detalhes">  
+                  <p class="descricao-produto">Colar duplo com pingente de coração</p>
+                  <p class="valor-produto">R$ 100,00</p>
+              </div>
+            </div>
+          </li>
+        </ul>
       </div>
-      <div class="produto">
-          <div class="image-produto"></div>
-          <div class="produto-detalhes">  
-              <p class="descricao-produto">Colar duplo com pingente de coração</p>
-              <p class="valor-produto">R$ 100,00</p></div>
-      </div>
-      <div class="produto">
-          <div class="image-produto"></div>
-          <div class="produto-detalhes">  
-              <p class="descricao-produto">Colar duplo com pingente de coração</p>
-              <p class="valor-produto">R$ 100,00</p></div>
-      </div>
-      <div class="produto">
-          <div class="image-produto"></div>
-          <div class="produto-detalhes">  
-              <p class="descricao-produto">Colar duplo com pingente de coração</p>
-              <p class="valor-produto">R$ 100,00</p></div>
-      </div>
-  </div>
+    </div>
+    
 
     </main>
     <footer id="rodape">
@@ -252,7 +269,7 @@
         <div class="info-marca">
           <img
             class="logo-preta-simbolo"
-            src="../images/logo-preta.png"
+            src="../../../images/logo-preta.png"
             alt=""
           />
           <p class="texto-marca">
@@ -359,6 +376,40 @@
     </div>
 
 
+
+    <div class="notificacao-container">
+      <div class="close-image"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <mask id="mask0_369_296" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="1" y="1" width="22" height="22">
+        <path d="M12 22C17.523 22 22 17.523 22 12C22 6.477 17.523 2 12 2C6.477 2 2 6.477 2 12C2 17.523 6.477 22 12 22Z" fill="white" stroke="white" stroke-width="2" stroke-linejoin="round"/>
+        <path d="M14.8285 9.17139L9.17149 14.8284M9.17149 9.17139L14.8285 14.8284" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </mask>
+        <g mask="url(#mask0_369_296)">
+        <path d="M0 0H24V24H0V0Z" fill="black"/>
+        </g>
+        </svg>
+        </div>
+      <div class="div-produto-adicionado">
+        <div class="group-produto">
+          <div class="imagem-group"> <svg width="20" height="20" viewBox="0 0 39 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="19.5" cy="20" r="19.5" fill="#A85A08"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M10 20L12.5 17.5L17.5 22.5L27.5 12.5L30 15L17.5 27.5L10 20Z" fill="#F4F4F4" stroke="#F4F4F4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+             <img src="../../../images/foto-inicial-1.jpg" alt=""></div>  
+          <div class="info-produto-adicionado">
+            <p class="titulo-produto-adicionado">Colar duplo com pingente de coração</p>
+            <p class="valor-qtd">1 x R$30,00</p>
+            <p class="text-adicionado-sucesso">Adicionado ao carrinho com sucesso!</p>
+          </div>
+        </div>
+          <div class="total-compra">
+            <p class="total-produtos-carrinho">Total(1 produto(s))</p>
+            <p class="valor-total-carrinho">R$30,00</p>
+          </div>
+          
+          <a href="" class="ver-carrinho">Ver Carrinho</a>
+      </div>
+    </div>
+
     
    <!-- JS do Fancybox -->
    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
@@ -383,7 +434,6 @@
           isNavigation: true,
           gap: 10, // Espaçamento entre os itens
           pagination: false,
-          cover: true,
           focus: false, // Desativa a centralização
           arrows: false, // Remove setas de navegação
           drag: true, // Permite arrastar os itens
@@ -422,10 +472,34 @@
             type: "classic",
           }, 
         });
+
+
+        new Splide('#produtos-carousel', {
+          type: 'slide', // Define o tipo de carrossel (loop, slide, fade)
+          perPage: 4,   // Quantos produtos são exibidos por vez
+          perMove: 1,   // Quantos produtos rodam a cada navegação
+          gap: '1rem',  // Espaço entre os slides
+          pagination: false,
+          focus: false, // Desativa a centralização
+          arrows: false, // Remove setas de navegação
+          drag: true, // Permite arrastar os itens
+          breakpoints: {
+            880:{
+              arrows: true,
+              perPage: 2
+            },
+            768: {
+              perPage: 2, // Em telas menores, mostra apenas um por vez
+              arrows: false,
+            },
+          },
+        }).mount();
       });
-      
+    
      
     </script>
+   
+
     
   </body>
 </html>
